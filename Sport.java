@@ -5,29 +5,36 @@
  * @author (your name)
  * @version (a version number or a date)
  */
-public class Sport
+public abstract class Sport
 {
-    // instance variables - replace the example below with your own
-    private int x;
-
-    /**
-     * Constructor for objects of class Sport
-     */
-    public Sport()
+    private String name;
+    private int wins, losses, ties;
+    public Sport(int wins, int losses, int ties)
     {
-        // initialise instance variables
-        x = 0;
+        this.wins = wins;
+        this.losses = losses;
+        this.ties = ties;
     }
-
-    /**
-     * An example of a method - replace this comment with your own
-     *
-     * @param  y  a sample parameter for a method
-     * @return    the sum of x and y
-     */
-    public int sampleMethod(int y)
+       
+    public abstract void printStats(String name);
+    
+    public String getName()
     {
-        // put your code here
-        return x + y;
+        return name;
+    }
+    
+    public int getWins()
+    {
+        return wins;
+    }
+    
+    public int getLosses()
+    {
+        return losses;
+    }
+    
+    public int getTies()
+    {
+        return ties;
     }
 }
