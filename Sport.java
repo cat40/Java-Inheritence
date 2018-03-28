@@ -16,7 +16,7 @@ public abstract class Sport
         this.ties = ties;
     }
        
-    public abstract void printStats(String name);
+    public abstract String printStats();
     
     public String getName()
     {
@@ -36,5 +36,5 @@ public abstract class Sport
     public int getTies()
     {
         return ties;
-    }
+        }
 }
