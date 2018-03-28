@@ -7,7 +7,6 @@
  */
 public abstract class Sport
 {
-    private String name;
     private int wins, losses, ties;
     public Sport(int wins, int losses, int ties)
     {
@@ -18,10 +17,7 @@ public abstract class Sport
        
     public abstract String printStats();
     
-    public String getName()
-    {
-        return name;
-    }
+    public abstract String getName();
     
     public int getWins()
     {
@@ -36,5 +32,5 @@ public abstract class Sport
     public int getTies()
     {
         return ties;
-        }
+    }
 }
