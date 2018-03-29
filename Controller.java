@@ -20,23 +20,33 @@ public class Controller
         int ties = input.nextInt();
         System.out.print("Enter the player's sport(Basketball, Baseball, or Soccer): ");
         Sport sport;
-        loop:
-        while(true)
+        Player p = new Player(name);
+        String goAgain;
+        do
         {
-            String sportName = input.nextLine().toLowerCase();
-            switch(sportName)
+            loop:
+            while(true)
             {
-                case "basektball":
+                String sportName = input.nextLine().toLowerCase();
+                switch(sportName)
+                {
+                    case "basektball":
                     sport = new Basketball(wins, losses, ties);
                     break loop;
-                case "baseball":
+                    case "baseball":
                     sport = new Baseball(wins, losses, ties);
                     break loop;
-                case "soccer":
+                    case "soccer":
                     sport = new Soccer(wins, losses, ties);
                     break loop;
+                }
+                System.out.println("you have entered an invalid sport. Try again or else");
             }
-            System.out.println("you have entered an invalid sport. Try again or else");
-        }
+            p.addSport(sport);
+            System.out.println("Enter a sport again?");
+            goAgain = input.nextLine();
+        }while(!goAgain.equalsIgnoreCase("no"));
+        
+        p.printStats();
     }
 }
