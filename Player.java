@@ -14,16 +14,18 @@ public class Player
     {
         this.name = name;
     }
+    
     public void addSport(Sport sport)
     {
         sports.add(sport);
     }
+    
     public void printStats()
     {
         System.out.printf("%f's statistics:\n\n");
         for(Sport sport : sports)
         {
-            System.out.println(
+            System.out.println(sport.printStats()+"\n");
         }
     }
 }
