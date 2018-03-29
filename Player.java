@@ -28,4 +28,9 @@ public class Player
             System.out.println(sport.printStats()+"\n");
         }
     }
+    
+    public String getName()
+    {
+        return name;
+    }
 }
