@@ -28,7 +28,8 @@ public class Basketball extends Sport
         
     public String printStats() {
         String output = "";
-        output += "Their win percentage is " + (this.getWins() / (this.getWins() + this.getLosses() + this.getTies())) + "%\n";
+        double winP = (double)(this.getWins()) / (double)(this.getWins() + this.getLosses() + this.getTies()) * (double)100;
+        output += "Their win percentage is " + winP + "%\n";
         output += "They have scored " + scored + " points with a " + percentage + "% shooting percentage\n";
         output += "They have " + assists + " assists";
         return(output);

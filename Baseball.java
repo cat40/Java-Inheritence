@@ -28,7 +28,8 @@ public class Baseball extends Sport
         
     public String printStats() {
         String output = "";
-        output += "Their win percentage is " + (this.getWins() / (this.getWins() + this.getLosses() + this.getTies())) + "%\n";
+        double winP = (double)(this.getWins()) / (double)(this.getWins() + this.getLosses() + this.getTies()) * (double)100;
+        output += "Their win percentage is " + winP + "%\n";
         output += "They have " + rbi + " rbi's with a " + percentage + "% batting average\n";
         output += "They have " + hr + " homeruns";
         return(output);
