@@ -22,7 +22,7 @@ public class Player
     
     public void printStats()
     {
-        System.out.printf("%f's statistics:\n\n");
+        System.out.printf("%f's statistics:\n\n", name);
         for(Sport sport : sports)
         {
             System.out.println(sport.printStats()+"\n");
