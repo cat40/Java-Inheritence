@@ -5,20 +5,25 @@
  * @author (your name)
  * @version (a version number or a date)
  */
+import java.util.Scanner;
 public class Basketball extends Sport
 {
     private int percentage, scored, assists;
     private static String name = "Basketball";
-
+    private Scanner input = new Scanner(System.in);
+    
     /**
      * Constructor for objects of class Basketball
      */
-    public Basketball(int wins, int losses, int ties, int percentage, int scored, int assists)
+    public Basketball(int wins, int losses, int ties)
     {
         super(wins, losses, ties);
-        this.percentage = percentage;
-        this.scored = scored;
-        this.assists = assists;
+        System.out.print("Enter his/her shooting percentage:");
+        this.percentage = input.nextInt();
+        System.out.print("Enter his/her points scored:");
+        this.scored = input.nextInt();
+        System.out.print("Enter his/her assists made:");
+        this.assists = input.nextInt();
     }
         
     public String printStats() {
