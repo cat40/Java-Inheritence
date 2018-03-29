@@ -30,7 +30,7 @@ public class Controller
                 String sportName = input.nextLine().toLowerCase();
                 switch(sportName)
                 {
-                    case "basektball":
+                    case "basketball":
                     sport = new Basketball(wins, losses, ties);
                     break loop;
                     case "baseball":
@@ -39,14 +39,15 @@ public class Controller
                     case "soccer":
                     sport = new Soccer(wins, losses, ties);
                     break loop;
+                    default:
+                    System.out.println("you have entered an invalid sport. Try again or else");
                 }
-                System.out.println("you have entered an invalid sport. Try again or else");
             }
             p.addSport(sport);
             System.out.println("Enter a sport again?");
             goAgain = input.nextLine();
         }while(!goAgain.equalsIgnoreCase("no"));
-        
+
         p.printStats();
     }
 }
