@@ -5,19 +5,25 @@
  * @author (your name)
  * @version (a version number or a date)
  */
+import java.util.ArrayList;
 public class Player
 {
-    // instance variables - replace the example below with your own
-    private int x;
-
-    /**
-     * Constructor for objects of class Player
-     */
-    public Player()
+    private ArrayList<Sport> sports = new ArrayList<Sport>();
+    private String name;
+    public Player(String name)
     {
-        // initialise instance variables
-        x = 0;
+        this.name = name;
     }
-    public void addSport(Sport s)
-    
+    public void addSport(Sport sport)
+    {
+        sports.add(sport);
+    }
+    public void printStats()
+    {
+        System.out.printf("%f's statistics:\n\n");
+        for(Sport sport : sports)
+        {
+            System.out.println(
+        }
+    }
 }
