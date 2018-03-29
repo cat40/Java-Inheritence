@@ -18,7 +18,6 @@ public class Controller
         int losses = input.nextInt();
         System.out.print("Enter the player's ties: ");
         int ties = input.nextInt();
-        System.out.print("Enter the player's sport(Basketball, Baseball, or Soccer): ");
         Sport sport;
         Player p = new Player(name);
         String goAgain;
@@ -27,6 +26,7 @@ public class Controller
             loop:
             while(true)
             {
+                System.out.print("Enter the player's sport(Basketball, Baseball, or Soccer): ");
                 String sportName = input.nextLine().toLowerCase();
                 switch(sportName)
                 {
