@@ -9,12 +9,15 @@ public class Soccer extends Sport
 {
     private int goals, attempts, penalties;
     private static String name = "Soccer";
-    public Soccer(int wins, int losses, int ties, int goals, int attempts, int penalties)
+    public Soccer(int wins, int losses, int ties)
     {
         super(wins, losses, ties);
-        this.goals = goals;
-        this.attempts = attempts;
-        this.penalties = penalties;
+        System.out.print("Enter the player's goals: ");
+        goals = input.nextInt();
+        System.out.print("Enter the player's goal attempts: ");
+        attempts = input.nextInt();
+        System.out.print("Enter the player's penalties: ");
+        penalties = input.nextInt();
     }
     
     public String printStats()

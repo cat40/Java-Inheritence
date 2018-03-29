@@ -5,9 +5,11 @@
  * @author (your name)
  * @version (a version number or a date)
  */
+import java.util.Scanner;
 public abstract class Sport
 {
     private int wins, losses, ties;
+    public final static Scanner input = new Scanner(System.in);
     public Sport(int wins, int losses, int ties)
     {
         this.wins = wins;
